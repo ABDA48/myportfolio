@@ -33,7 +33,6 @@ class ServiceResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('price')
-                    ->numeric()
                     ->default(null)
                     ->prefix('Ar'),
             ]);
@@ -49,7 +48,7 @@ class ServiceResource extends Resource
                 Tables\Columns\TextColumn::make('icon')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->money()
+                     ->prefix('Ar')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
